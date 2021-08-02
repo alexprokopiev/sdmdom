@@ -1,0 +1,235 @@
+.popup
+    display: none
+    opacity: 0
+    padding: 3rem 3rem 0
+    min-height: 100%
+    &__left
+        display: flex
+        flex-direction: column
+        width: 50%
+        padding-left: 3rem
+    &__title
+        font-size: 4.2rem
+        text-align: left
+    .subtitle
+        text-align: left
+        width: 32rem
+    &__left-img
+        display: flex
+        align-items: flex-end
+        width: 85%
+        flex-grow: 1
+        img
+            display: block
+            width: 100%
+    &__right
+        width: 50%
+    &__refer
+        display: block
+        margin-top: 1.5rem
+        text-align: center
+        color: #47649b
+        font-size: 1.3rem
+
+.excursion
+    display: none
+    opacity: 0
+    min-height: 100%
+    &__left
+        width: 50%
+        background: url(./img/modal_excursion.png) center center/cover no-repeat
+        border-radius: 1.2rem 0 0 1.2rem
+    &__right
+        width: 50%
+        display: flex
+        justify-content: center
+        align-items: center
+
+.callback
+    display: none
+    opacity: 0
+    min-height: 100%
+    &__left
+        position: relative
+        width: 50%
+        background: url(./img/modal_callback.png) center center/cover no-repeat
+        border-radius: 1.2rem 0 0 1.2rem
+    &__left-info
+        position: absolute
+        bottom: 6rem
+        left: 4rem
+    &__left-name
+        background-color: #fddb84
+        transform: skewX(-10deg)
+        padding: 0.5rem 1.7rem
+        font-family: "Berlingske", Arial, sans-serif
+        font-size: 1.5rem
+        border-radius: 0.5rem
+        width: fit-content
+        span
+            display: block
+            transform: skewX(10deg)
+    &__left-descr
+        width: 24rem
+        transform: skewX(-10deg)
+        margin-top: -0.3rem
+        margin-left: 1.4rem
+        padding: 0.5rem 1.7rem
+        font-size: 1.4rem
+        color: #8c94a2
+        border-radius: 0.5rem
+        background-color: #fff
+        span
+            display: block
+            transform: skewX(10deg)
+            &::after
+                position: absolute
+                content: url(./img/logo_grey.svg)
+                right: 10rem
+                width: 6rem
+    &__right
+        width: 50%
+        display: flex
+        justify-content: center
+        align-items: center
+
+.feedback
+    display: none
+    opacity: 0
+    min-height: 100%
+    font-size: 2.6rem
+    line-height: 3.5rem
+    padding: 20rem 5rem
+
+.videoframe
+    height: 100%
+    border-radius: 1.2rem
+    iframe
+        width: 100%
+        height: 100%
+
+.confidence
+    flex-direction: column
+    padding: 3rem
+    height: 60rem
+    &__text
+        margin-top: 3rem
+        overflow-y: scroll
+
+.thanks
+    display: none
+    opacity: 0
+    min-height: 100%
+    padding: 20rem 5rem
+    flex-direction: column
+
+.help
+    display: none
+    opacity: 0
+    flex-direction: column
+    min-height: 100%
+    font-size: 2.6rem
+    padding: 20rem 5rem
+    list-style: none
+    counter-reset: num
+    &__item
+        position: relative
+        padding-left: 3rem
+        margin-bottom: 1rem
+        &::before
+            position: absolute
+            content: counter(num) '.'
+            counter-increment: num
+            left: -0.5rem
+            font-weight: 700
+
+@media (max-width: 1200px)
+    .help, .thanks
+        padding: 12rem 5rem
+    .feedback
+        padding: 8rem 5rem
+    .popup
+        &__title
+            font-size: 3.2rem
+            span
+                display: inline
+        .subtitle
+            font-size: 1.6rem
+        .form
+            padding: 4rem 2.5rem
+            min-height: 50rem
+            &__title
+                font-size: 2.2rem
+                span
+                    font-size: 2.2rem
+@media (max-width: 992px)
+    .excursion, .callback
+        &__left
+            display: none
+        &__right
+            width: 100%
+    .feedback
+        font-size: 1.8rem
+    .popup
+        flex-direction: column
+        &__title
+            font-size: 2.6rem
+        .subtitle
+            width: 100%
+            margin: 1rem 0 2rem
+        &__left
+            width: 100%
+        &__left-img
+            display: none
+        &__right
+            width: 100%
+        .form
+            min-height: 40rem !important
+            &__title
+                width: 100% !important
+                font-size: 2rem
+                span
+                    font-size: 2rem
+            &__input-descr
+                margin-top: 1rem
+@media (max-width: 768px)
+    .help, .thanks
+        padding: 5rem
+    .help
+        font-size: 2.2rem
+    .feedback
+        font-size: 1.6rem
+        line-height: 2.8rem
+        padding: 5rem
+    .confidence
+        h3
+            font-size: 2rem
+    .popup
+        &__title
+            font-size: 1.8rem
+        .subtitle
+            font-size: 1.3rem
+@media (max-width: 576px)
+    .help, .thanks
+        padding: 3rem
+        font-size: 1.7rem
+    .feedback
+        font-size: 1.5rem
+        line-height: 2.2rem
+        padding: 3rem
+    .popup
+        padding: 2rem 1rem 0
+        &__left
+            padding-left: 0
+        &__refer
+            display: none
+        .subtitle
+            font-size: 1.1rem
+        .form
+            min-height: 35rem !important
+            &__title
+                font-size: 1.6rem
+                span
+                    font-size: 1.6rem
+            &__policy
+                font-size: 1.1rem

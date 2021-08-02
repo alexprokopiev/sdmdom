@@ -1,0 +1,10 @@
+mixin house_card_inner(id, cat_num, photo_start, photo_end)
+    .house-card__inner-wrap
+        - var m = photo_start 
+        while m <= photo_end
+            .house-card__inner-img
+                img(src=`./img/${id}s/${id}${cat_num}/${m++}.jpg`, alt=`${id}_photo`)
+    .house-card__mini-wrap        
+        - var n = photo_start 
+        while n <= photo_end            
+            img(src=`./img/${id}s/${id}${cat_num}/${n++}.jpg`, alt=`${id}_photo`).house-card__mini-img

@@ -1,0 +1,33 @@
+section.your-project#yourProject
+    .container 
+        h2.your-project__title Уже есть
+            span  проект или смета?
+        .subtitle Сделаем бесплатный аудит и укажем на возможные 
+            br
+            | подводные камни
+        .your-project__wrap 
+            .your-project__left
+                .your-project__left-title Прикрепите ваше ТЗ
+                    span  и получите коммерческое предложение, которое содержит в себе:
+                .your-project__item-wrap 
+                    .your-project__item
+                        .your-project__item-img 
+                            img(src="./img/yp1.webp", alt="your_project_img")
+                        .your-project__item-title Анализ
+                        .your-project__item-descr сметы на отсутствие скрытых платежей
+                    .your-project__item 
+                        .your-project__item-img 
+                            img(src="./img/yp2.webp", alt="your_project_img")
+                        .your-project__item-title Комментарии
+                        .your-project__item-descr архитектора по планировочному решению
+                    .your-project__item 
+                        .your-project__item-img 
+                            img(src="./img/yp3.webp", alt="your_project_img")
+                        .your-project__item-title Заключение
+                        .your-project__item-descr инженера-конструктора на соответствие нормам и требованиям безопасности жилых помещений
+                    .your-project__item 
+                        .your-project__item-img 
+                            img(src="./img/yp4.webp", alt="your_project_img")
+                        .your-project__item-title Индивидуальное предложение
+            .your-project__right 
+                +form("your-project-form", "Прикрепите <span> проект или смету</span>", "и получите индивидуальное предложение", "Заявка на аудит проекта", "В течение 2-х рабочих дней мы проверим документы и свяжемся с вами, чтобы сделать индивидуальное предложение")

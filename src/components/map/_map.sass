@@ -1,0 +1,107 @@
+.map
+    position: relative
+    min-height: 87rem
+    &::before
+        position: absolute
+        content: ''
+        top: 0
+        left: 0
+        width: 100%
+        height: 100%
+        z-index: -1
+        background: url(./img/map_bg.png) center bottom/(120% auto) no-repeat
+    &::after
+        position: absolute
+        content: url(./img/dron.webp)
+        top: 15rem
+        left: 5rem
+    &__title
+        width: 85rem
+    &__wrap
+        display: flex
+        margin-top: 8rem
+    &__left
+        width: 50%
+        padding: 8rem 0 0 4rem
+        font-size: 1.6rem
+        line-height: 2.5rem
+    &__office
+        color: #ffffff
+        border-radius: 0.5rem
+        background-color: #6a7a96
+        transform: skewX(-10deg)
+        font-size: 1.1rem
+        font-weight: 700
+        text-transform: uppercase
+        padding: 0.5rem 1.7rem
+        width: fit-content
+        span
+            display: block
+            transform: skewX(10deg)
+    &__address
+        margin-top: 2rem
+        width: 27rem
+    &__refer
+        color: #47649b
+    &__text
+        margin-top: 2rem
+        width: 27rem
+    &__right
+        width: 50%
+        display: flex
+        justify-content: flex-end
+@media (max-width: 1200px)
+    .map
+        min-height: 80rem
+        &::after
+            display: none
+        &__wrap
+            margin-top: 5rem
+        &__right>.form
+            width: 35rem
+        &__right>.form>.form__title
+            width: 27rem
+@media (max-width: 992px)
+    .map
+        &__title
+            width: 100%
+        .form__title
+            font-size: 2.4rem
+            span
+                font-size: 2.4rem
+@media (max-width: 768px)
+    .map
+        min-height: 90rem
+        &::before
+            display: none
+        &__wrap
+            flex-direction: column
+        &__left
+            padding: 0
+            width: 100%
+            text-align: center
+        &__office
+            margin: 0 auto
+        &__address
+            width: 100%
+        &__text
+            width: 100%
+        &__right
+            margin-top: 3rem
+            width: 100%
+            justify-content: center
+        &__right>.form
+            width: 55rem
+@media (max-width: 576px)
+    .map
+        min-height: 75rem
+        &__wrap
+            margin-top: 2rem
+        &__left
+            font-size: 1.2rem
+        &__right>.form
+            width: 28rem
+            padding: 3rem 1.5rem
+            min-height: 36rem
+        &__right>.form>.form__title
+            width: 100%

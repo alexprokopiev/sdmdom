@@ -1,0 +1,23 @@
+mixin form(id, title, subtitle, leadtype, descr)
+    form(action="sendmail.php" method="post" id=id).form
+        h3.form__title!=title
+        .form__subtitle=subtitle
+        label.form__your-file            
+            .form__your-file-img
+                img(src="./img/clip.svg", alt="clip")
+            a.refer.form__your-file-refer Прикрепите файл
+            input(type="file" name="client_project")
+        input(type="hidden" name="utm_source" value="<?php if (isset($_GET['utm_source']))echo $_GET['utm_source'];else echo $_COOKIE['utm_source'];?>")
+        input(type="hidden" name="utm_medium" value="<?php if (isset($_GET['utm_medium']))echo $_GET['utm_medium'];else echo $_COOKIE['utm_medium'];?>")
+        input(type="hidden" name="utm_campaign" value="<?php if (isset($_GET['utm_campaign']))echo $_GET['utm_campaign'];else echo $_COOKIE['utm_campaign'];?>")
+        input(type="hidden" name="utm_term" value="<?php if (isset($_GET['utm_term']))echo $_GET['utm_term'];else echo $_COOKIE['utm_term'];?>")
+        input(type="hidden" name="utm_content" value="<?php if (isset($_GET['utm_content']))echo $_GET['utm_content'];else echo $_COOKIE['utm_content'];?>")
+        input(type="hidden" name="city" value="Тюмень")
+        input(type="hidden" name="type" value="Дома из блока")
+        input(type="hidden" name="leadtype" value=leadtype)        
+        .form__input-descr Введите номер телефона
+        input(required type="text" name="phone" placeholder="Введите номер телефона").input.input_form
+        .form__descr=descr
+        button(type="submit").button.button_form
+        .form__policy Нажимая на кнопку, вы принимаете условия 
+            a(href="#" target="_blank").form__policy-ref.open-confidence передачи данных 

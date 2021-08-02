@@ -1,0 +1,142 @@
+.start
+    position: relative
+    min-height: 134.4rem
+    background: url(./img/start_bg.jpg) center top/cover no-repeat
+    &>.container
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        padding-top: 6rem
+    &__left
+        width: 72rem
+    &__title
+        text-align: left
+    &__right
+        28rem
+    &__text
+        width: 20rem
+        margin: -3rem -5rem 0 auto
+        font-size: 1.9rem
+        span
+            font-weight: 700
+    &__item-wrap
+        display: flex
+        align-items: flex-end
+        justify-content: space-around
+        width: 45rem
+        margin-top: 40rem
+    &__item
+        position: relative
+        min-width: 20rem
+        background-color: #ffffff
+        border-radius: .6rem
+        border-top: none
+        padding: 2rem
+        &::before
+            position: absolute
+            content: url(./img/item_top.svg)
+            width: 100%
+            height: 3.2rem
+            top: -2rem
+            left: 0
+        &::after
+            position: absolute
+            content: ''
+            top: 0
+            right: 0.8rem
+            bottom: 0.8rem
+            left: 0.8rem
+            border: .1rem solid #f3f2f5
+            border-top: none
+            border-radius: .6rem
+        &_dark
+            min-width: 28rem
+            border: none
+            background-color: #7888a6
+            margin-right: 2rem
+            &::before
+                content: url(./img/item_top_dark.svg)
+                top: -2.8rem
+            &::after
+                border: none
+    &__item-text
+        padding-top: 1rem
+        font-size: 1.5rem
+        max-width: 16rem
+        span
+            font-weight: 700
+        &_light
+            max-width: 23rem
+            color: #ffffff
+#start-warranty
+    &::after
+        position: absolute
+        content: '25 лет гарантии'
+        top: 9.5rem
+        left: 2rem
+        font-size: 1.4rem
+        font-weight: 700
+        background-color: #fddb84
+        padding: 0.5rem 1.7rem
+        transform: skewX(-10deg)
+        border-radius: 0.5rem
+@media ( max-width: 1200px)
+    .start
+        min-height: 130rem
+        &>.container
+            flex-direction: column
+        &__left
+            width: 100%
+        &__title
+            text-align: center
+        &__text
+            margin: 2rem 8rem 0 auto
+        &__item-wrap
+            margin: 8rem auto 0
+        &__item
+            &::before
+                content: ''
+            &::after
+                top: .8rem
+                border-top: .1rem solid #f3f2f5
+            &_dark
+                width: 64rem
+                height: 18rem
+                margin: 5rem auto 0
+                display: flex
+                &::after
+                    border-top: none
+        &__item-text
+            &_light
+                max-width: 46rem
+                display: flex
+                flex-direction: column
+                justify-content: center
+@media ( max-width: 768px)
+    .start
+        min-height: 110rem
+        &>.container
+            padding-top: 3rem
+        &__text
+            margin: 2rem 0 0
+            width: 100%
+            font-size: 1.6rem
+            text-align: center
+        &__item
+            &_dark
+                width: 50rem
+@media ( max-width: 576px)
+    .start
+        &>.container
+            padding-top: 0
+        &__item-wrap
+            width: 100%
+            flex-direction: column
+            align-items: center
+            margin-top: 3rem
+        &__item
+            margin-bottom: 2rem
+            &_dark
+                width: 30rem
+                .start__item-img
+                    display: none

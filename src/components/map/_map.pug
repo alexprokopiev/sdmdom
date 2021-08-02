@@ -1,0 +1,14 @@
+section.map 
+    .container 
+        h2.map__title 
+            span Остались вопросы? 
+            | Давайте встретимся и обсудим их за чашкой кофе в удобное для вас время
+        .map__wrap 
+            .map__left
+                .map__office
+                    span офис
+                .map__address Москва, Волоколамское шоссе 116, стр 3, офис 104А
+                a(href="https://yandex.ru/maps/?um=constructor%3Acc42e02f68411073106b12b5a2edb33b8c9639ca3d9eb829c30e9a4b72fb5a7b&source=constructorLink" target="_blank").map__refer посмотреть на карте
+                .map__text Также мы можем встретиться у вас на объекте или в уютной кофейне в Москве или провести видео-встречу
+            .map__right
+                +form("map-form", "Назначьте <span> встречу</span>", "", "Заявка на встречу", "После отправки данных менеджер свяжется с вами для согласования встречи")

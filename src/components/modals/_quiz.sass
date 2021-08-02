@@ -1,0 +1,514 @@
+.quiz
+    position: relative
+    width: 100%
+    height: 100%
+    display: none
+    opacity: 0
+    &__page
+        position: absolute
+        display: none
+        padding: 5rem
+        width: 100%
+        height: 100%
+        background: url(./img/quiz-item_bg.jpg) center center/cover no-repeat
+        border-radius: 1.2rem
+        &_active
+            display: block
+    &__steps
+        position: relative
+        margin: 0 auto
+        font-size: 1.5rem
+        width: 78rem
+        height: 3.5rem
+        text-align: center
+        background-color: #f6f6f7
+        border-radius: 1.75rem
+    &__steps-progress
+        position: absolute
+        height: 3.5rem
+        background: linear-gradient(to bottom, #b8e874 0%, #a1c841 100%)
+        border-radius: 1.75rem
+        transition: 1s
+        &::before
+            position: absolute
+            content: ''
+            width: 100%
+            height: 100%
+            top: 0
+            left: 0
+            background: repeating-linear-gradient(-45deg, transparent, transparent 0.6rem, rgba(255, 255, 255, 0.16) 0.6rem, rgba(255, 255, 255, 0.16) 1.2rem)
+            background-size: 5rem 5rem
+            animation: move 2s linear infinite
+    @keyframes move
+        0%
+            background-position: 0 0
+
+        100%
+            background-position: 5rem 0
+
+    &__steps-text
+        position: absolute
+        line-height: 3.5rem
+        width: 100%
+    &__subtitle
+        margin-top: 3rem
+        padding-left: 3rem
+        font-size: 2rem
+        line-height: 2.8rem
+        color: #8c94a2
+    &__title
+        width: 61rem
+        margin: 2rem 0 0
+        padding-left: 3rem
+        text-align: left
+        font-size: 4.6rem
+        font-style: normal
+        color: #000000
+    &__question
+        display: flex
+        flex-wrap: wrap
+        margin-top: 3rem
+        padding-left: 3rem
+        width: 71rem
+        &_image
+            width: 100%
+            justify-content: space-between
+    &__question-label-radio
+        position: relative
+        display: flex
+        align-items: center
+        width: 34rem
+        height: 6rem
+        margin-bottom: 2rem
+        padding-left: 6.5rem
+        font-size: 1.7rem
+        cursor: pointer
+        input
+            display: none
+    &__input
+        position: absolute
+        left: 0
+        width: 4.6rem
+        min-width: 4.6rem
+        height: 4.6rem
+        margin-right: 1.7rem
+        border-radius: 50%
+        -webkit-box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.05)
+        box-shadow: inset 0 1px 1px 0 rgba(0, 0, 0, 0.05)
+        background-color: #f3f3f5
+        -webkit-transition: 0.2s
+        transition: 0.2s
+        &_img
+            left: 50%
+            bottom: 2.5rem
+            transform: translate(-50%, -50%)
+        &_checked
+            display: flex
+            justify-content: center
+            align-items: center
+            &::before
+                content: ""
+                position: absolute
+                width: 100%
+                height: 100%
+                border-radius: 50%
+                background: linear-gradient(to bottom, #a4cd5c 0%, #82af31 100%)
+                box-shadow: inset 0 0 2.4rem rgba(255, 255, 255, 0.3), 0 0.5rem 0.9rem 0 rgba(175, 200, 130, 0.55)
+                transition: 0.2s
+            &::after
+                content: ""
+                position: absolute
+                width: 1.6rem
+                height: 1.6rem
+                border-radius: 50%
+                background-color: #ffffff
+                transition: 0.2s
+    &__img
+        position: absolute
+        width: 34rem
+        bottom: 0
+        right: 0
+        img
+            width: 100%
+    &__img-info
+        position: absolute
+        bottom: 10rem
+        left: -3rem
+    &__img-name
+        width: fit-content
+        transform: skewX(-10deg)
+        padding: 0.5rem 1.7rem
+        font-family: "Berlingske", Arial, sans-serif
+        font-size: 1.5rem
+        color: #ffffff
+        border-radius: 0.5rem
+        background-color: #6a7a96
+        span
+            display: block
+            transform: skewX(10deg)
+    &__img-descr
+        width: 25rem
+        transform: skewX(-10deg)
+        padding: 0.5rem 1.7rem
+        font-size: 1.4rem
+        color: #8c94a2
+        border-radius: 0.5rem
+        background-color: #ffffff
+        span
+            position: relative
+            display: block
+            transform: skewX(10deg)
+            &::after
+                position: absolute
+                content: url(./img/logo_grey.svg)
+                right: 0
+                width: 6rem
+    &__question-label-range
+        margin-top: 4rem
+    &__range
+        -webkit-appearance: none
+        width: 50rem
+        outline: none
+        cursor: pointer
+        height: 1rem
+        border: 0
+        border-radius: .5rem
+        background: linear-gradient(to bottom, #a4cd5c 0%, #82af31 100%)
+        box-shadow: inset 0 1px 1px #F0F0F0, 0 3px 6px -5px #BBB
+        &::-webkit-slider-thumb
+            -webkit-appearance: none
+            width: 4rem
+            height: 4rem
+            border: 0.4rem solid #fff
+            outline: 0
+            border-radius: 50%
+            box-shadow: 0 0.5rem 0.9rem 0 rgba(175, 200, 130, 0.55), inset 0 0 2.4rem rgba(255, 255, 255, 0.3)
+            background: linear-gradient(to bottom, #a4cd5c 0%, #82af31 100%)
+            transition: 0.2s
+    &__values-wrap
+        display: flex
+        width: 50rem
+        margin-top: 2rem
+        justify-content: space-between
+        font-size: 1.5rem
+    &__cur-value
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 12rem
+        height: 5.5rem
+        font-size: 1.7rem
+        border-radius: 1.6rem
+        background-color: #fafafa
+        box-shadow: inset 0 1px 0 0 rgba(39, 39, 39, 0.07)
+    &__question-label-img
+        position: relative
+        width: 16rem
+        font-size: 1.7rem
+        text-align: center
+        cursor: pointer
+        input
+            display: none
+    &__question-img
+        position: relative
+        width: 100%
+        height: 13rem
+        margin-bottom: 3rem
+        box-shadow: 0 1.4rem 5.9rem 0 rgba(163, 169, 183, 0.2)
+        border-radius: .8rem
+        background-color: #ffffff
+        color: #e5e5eb
+        font-size: 9rem
+        img
+            width: 100%
+            height: 100%
+            border-radius: .8rem
+    &__page-wrap
+        display: flex
+        margin-top: 5rem
+    &__page-left
+        position: relative
+        width: 50%
+        display: flex
+        justify-content: center
+        align-items: center
+        &::before
+            position: absolute
+            top: -4rem
+            left: -15rem
+            content: url(./img/quiz_leaves.webp)
+        &::after
+            position: absolute
+            bottom: -4rem
+            left: -15rem
+            content: url(./img/quiz_belt.webp)
+    &__page-right
+        position: relative
+        width: 50%
+        text-align: center
+        &::before
+            position: absolute
+            overflow: hidden
+            content: url(./img/quiz_box.jpg)
+            bottom: -2.5rem
+            right: -5rem
+            border-radius: 1.2rem
+        &::after
+            position: absolute
+            content: url(./img/quiz_box-cover.webp)
+            top: 7rem
+            right: -15rem
+    &__page-right-subtitle
+        font-family: "Berlingske", Arial, sans-serif
+        font-size: 3.2rem
+        font-weight: 700
+    &__page-right-title
+        font-size: 3rem
+        margin-top: 3rem
+        width: 47rem
+    &__sertificate
+        position: relative
+        width: 38rem
+        height: 28rem
+        margin: 2rem auto 0
+        background-color: #6a7a96
+        padding: 2rem
+        &::after
+            position: absolute
+            content: ''
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            background: url(./img/baget.webp) center center/cover no-repeat
+    &__sertificate-label
+        position: relative
+        margin: 2rem auto
+        width: 9.5rem
+        height: 3rem
+        transform: skewX(-10deg)
+        border-radius: 0.6rem
+        background-color: #fddb84
+        &::before
+            position: absolute
+            content: url(./img/logo_grey.svg)
+            width: 6rem
+            top: 1rem
+            left: 2rem
+            transform: skewX(10deg)
+    &__sertificate-name
+        margin-top: 2rem
+        font-family: "Berlingske", Arial, sans-serif
+        font-size: 3rem
+        font-style: italic
+        color: #fdd97f
+    &__sertificate-text
+        width: 32rem
+        margin: 1rem auto 0
+        font-size: 1.7rem
+        color: #ffffff
+    &__sertificate-number
+        margin-top: 2rem
+        font-size: 1.7rem
+        color: #ffffff
+        span
+            font-weight: 700
+    &__sertificate-valid
+        margin-top: 2rem
+        padding-left: 1rem
+        font-size: 1.6rem
+        span
+            font-weight: 700
+    &__sertificate-valid-descr
+        padding-left: 1rem
+        margin: 1rem auto 0
+        font-size: 1.4rem
+        color: #8c94a2
+        width: 30rem
+@media (max-width: 1200px)
+    .quiz
+        &__page
+            padding: 2rem
+        &__img
+            display: none
+        &__steps
+            width: 65rem
+        &__subtitle
+            font-size: 1.6rem
+        &__title
+            font-size: 3.2rem
+        &__question
+            width: 100%
+        &__question-label-radio
+            width: 30rem
+            height: 4rem
+        &__input
+            width: 3.6rem
+            min-width: 3.6rem
+            height: 3.6rem
+        &__question-label-img
+            width: 11rem
+            font-size: 1.3rem
+        &__question-img
+            height: 9rem
+            font-size: 7rem
+        &__page-wrap
+            flex-direction: column-reverse
+            margin-top: 2rem
+        &__page-left
+            width: 100%
+            margin-top: 2rem
+            &::before
+                display: none
+            &::after
+                display: none
+            &>.form
+                width: 65rem !important
+                min-height: 40rem
+            &>.form>.form__title
+                width: 55rem
+            &>.form>.form__subtitle
+                font-size: 1.5rem
+            &>.form>.form__input-descr
+                margin-top: 1rem
+        &__page-right
+            width: 100%
+            &::before
+                display: none
+            &::after
+                display: none
+        &__page-right-subtitle
+            font-size: 2rem
+        &__page-right-title
+            font-size: 2.4rem
+            width: 70rem
+            margin-top: 2rem
+        &__sertificate
+            display: none
+        &__sertificate-valid
+            display: none
+        &__sertificate-valid-descr
+            display: none
+@media (max-width: 992px)
+    .quiz
+        &__steps
+            width: 54rem
+        &__subtitle
+            font-size: 1.4rem
+            margin-top: 1rem
+            line-height: 2rem
+            padding-right: 3rem
+        &__title
+            font-size: 2.4rem
+            width: 100%
+        &__question
+            &_image
+                justify-content: flex-start
+        &__question-img
+            margin-bottom: 1.5rem
+        &__question-label-img
+            margin-right: 2rem
+            margin-top: 1rem
+            margin-bottom: .5rem
+        &__input
+            &_img
+                margin-bottom: .5rem
+                transform: translate(-50%, 0%)
+        &__range
+            width: 48rem
+        &__values-wrap
+            width: 48rem
+        &__page-right-title
+            font-size: 1.8rem
+            width: 54rem
+        &__page-left
+            &>.form
+                width: 50rem !important
+                min-height: 40rem !important
+            &>.form>.form__title
+                width: 46rem
+                font-size: 2.6rem
+                span
+                    font-size: 2.6rem
+@media (max-width: 768px)
+    .quiz
+        &__steps
+            width: 39rem
+        &__subtitle
+            font-size: 1.2rem
+        &__title
+            font-size: 2rem
+            margin-top: 1rem
+        &__range
+            width: 33rem
+        &__values-wrap
+            font-size: 1.3rem
+            width: 33rem
+        &__question
+            &_image
+                margin-top: 0
+        &__question-label-img
+            width: 10rem
+        &__page-left
+            &>.form
+                width: 40rem !important
+            &>.form>.form__title
+                width: 100%
+                font-size: 2rem
+                span
+                    font-size: 2rem
+        &__page-right-subtitle
+            font-size: 1.6rem
+        &__page-right-title
+            width: 100%
+@media (max-width: 576px)
+    .quiz
+        &__steps
+            width: 100%
+        &__subtitle
+            font-size: 1.1rem
+            line-height: 1.6rem
+            padding: 0
+        &__title
+            padding: 0
+            font-size: 1.6rem
+        &__question
+            padding: 0
+            margin-top: 1rem
+        &__input
+            width: 2.5rem
+            min-width: 2.5rem
+            height: 2.5rem
+            &_checked
+                &::after
+                    width: 1rem
+                    height: 1rem
+            &_img
+                margin-bottom: -0.8rem
+        &__question-label-radio
+            padding-left: 4rem
+            font-size: 1.4rem
+            height: 3rem
+            margin-bottom: 1rem
+        &__question-label-range
+            width: 100%
+        &__range
+            width: 100%
+        &__cur-value
+            width: 8rem
+            height: 4rem
+            border-radius: .8rem
+        &__values-wrap
+            font-size: 1.1rem
+        &__question-label-img
+            width: 7.5rem
+            margin-right: 1rem
+            font-size: 0.8rem
+        &__question-img
+            height: 7.5rem
+            font-size: 5rem
+            margin-bottom: 0.5rem
+        &__page-right-subtitle
+            display: none
+        &__page-right-title
+            display: none

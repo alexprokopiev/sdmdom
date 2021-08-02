@@ -1,0 +1,119 @@
+.header
+    .container
+        display: flex
+        height: 13rem
+        justify-content: space-between
+        align-items: center
+    &__logo
+        width: 30%
+        display: flex
+        justify-content: space-between
+    &__logo-img
+        min-width: 40%
+        img
+            width: 100%
+    &__logo-text
+        font-size: 1.3rem
+        color: #61656d
+        margin-left: 4rem
+        line-height: 1.8rem
+    &__address-wrap
+        width: 15%
+        display: flex
+    &__address-wrap-icon
+        min-width: 1.1rem
+    &__address-wrap-text
+        font-size: 1.4rem
+        margin-left: 1rem
+        line-height: 2rem
+        span
+            display: block
+            font-weight: 700
+    &__trip
+        display: flex
+        flex-direction: column
+        height: 7.5rem
+    &__trip-wrap
+        display: flex
+        padding-bottom: 1rem
+        height: 75%
+    &__trip-sign-up
+        height: 25%
+    &__trip-wrap-text
+        margin-left: 2rem
+        font-size: 1.4rem
+        span
+            display: block
+            font-family: 'Berlingske', Arial, sans-serif
+            font-size: 2.2rem
+            font-weight: 700
+    &__phone-text
+        font-size: 1.2rem
+        color: #61656d
+    &__phone-number
+        display: block
+        font-family: 'Berlingske', Arial, sans-serif
+        font-size: 2rem
+        text-decoration: none
+        color: #000000
+        cursor: auto
+        margin: .5rem 0 1rem
+@media ( max-width: 1200px)
+    .header
+        padding: 2.5rem 0
+        .container
+            flex-wrap: wrap
+        &__logo
+            width: 100%
+            flex-direction: column
+            align-items: center
+        &__logo-img
+            min-width: 0
+            width: 14rem
+        &__logo-text
+            padding: 1rem 0
+        &__address-wrap
+            width: 20%
+@media ( max-width: 768px)
+    .header
+        &__address-wrap
+            width: 30%
+        &__address-wrap-text
+            font-size: 1.2rem
+        &__trip
+            width: 30%
+        &__trip-wrap-img
+            min-width: 7rem
+            img
+                width: 100%
+        &__trip-wrap-text
+            font-size: 1.2rem
+            span
+                font-size: 1.8rem
+        &__phone
+            width: 30%
+        &__phone-number
+            font-size: 1.8rem
+@media ( max-width: 576px)
+    .header
+        min-height: 22.5rem
+        &__logo-img
+            width: 10rem
+        &__logo-text
+            margin-left: 0
+            text-align: center
+            font-size: 1.1rem
+        &__address-wrap
+            width: 100%
+        &__address-wrap-text
+            font-size: 1.1rem
+            span
+                display: inline
+        &__trip
+            margin-top: 2rem
+            width: 45%
+        &__phone
+            margin-top: 2rem
+            width: 45%
+        &__phone-number
+            font-size: 1.6rem

@@ -1,0 +1,31 @@
+mixin house_card(id, cat_num, photo_start, photo_end, title, value1, value2, value3, value4, text)
+    .house-card(id=`${id}${cat_num}`)
+        .house-card__left
+            include ./_house_card-inner.pug
+            +house_card_inner(id, cat_num, photo_start, photo_end)
+        .house-card__right
+            .house-card__right-title=title
+            .house-card__right-params-block
+                .house-card__right-param-item 
+                    .house-card__right-param-name Размер дома:
+                    .house-card__right-param-space 
+                    .house-card__right-param-value=value1
+                        |м
+                .house-card__right-param-item 
+                    .house-card__right-param-name Площадь:
+                    .house-card__right-param-space 
+                    .house-card__right-param-value=value2
+                        |м
+                        sup 2
+                .house-card__right-param-item 
+                    .house-card__right-param-name Комнат:
+                    .house-card__right-param-space 
+                    .house-card__right-param-value=value3
+                .house-card__right-param-item 
+                    .house-card__right-param-name Санузлов:
+                    .house-card__right-param-space 
+                    .house-card__right-param-value=value4
+            .house-card__right-text
+                .house-card__right-text-inner=text
+            button.button.button_house-card.open-callback
+            a(href="#").refer.house-card__right-refer.open-excursion Посетить готовый дом

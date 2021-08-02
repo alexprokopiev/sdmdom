@@ -1,0 +1,21 @@
+mixin stages_number(number, name)
+    .stages__number
+        .stages__number-title Этап
+        .stages__circle=number
+        .stages__name=name
+    
+mixin stages_card(num, text, title, ...ticks)
+    .stages__card
+        .stages__card-left
+            .stages__card-img 
+                img(src=`./img/stages/${num}.png`, alt="stages")
+            .stages__card-result 
+                span Результат
+            .stages__card-text!=text
+        .stages__card-right
+            .stages__card-order
+                span Этап #{num}
+            h3.stages__card-title!=title
+            ul.stages__card-descr-list 
+                each tick in ticks 
+                    li.stages__card-descr=tick

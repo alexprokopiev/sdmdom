@@ -1,0 +1,36 @@
+section.gift
+    .container 
+        .gift__left
+            h2.gift__title 
+                span Получите 
+                |2 бесплатных эскиза дома 
+                span уже сейчас
+            .gift__text Назначьте бесплатную встречу с архитектором и по её итогу получите 2 эскиза будущего дома и предварительную смету в 3-х комплектациях.
+                br
+                br
+                | И узнайте, как не совершать ошибок, которые делают 92% заказчиков при проектировании.
+                a(href="#").refer.gift__refer.open-help Посмотреть подробнее 
+                .gift__signature 
+                    .gift__name 
+                        span Кирилл Ильин
+                    .gift__role 
+                        span главный архитектор
+            .gift__item-wrap 
+                .gift__item
+                    .gift__item-img
+                        img(src="./img/sheets.webp", alt="gifts") 
+                    .gift__item-title Предварительная смета
+                    .gift__item-text в 3-х комплектациях
+                .gift__item
+                    .gift__item-img 
+                        img(src="./img/houses_photo.webp", alt="gifts") 
+                    .gift__item-title 2 варианта эскиза
+                    .gift__item-text будущего дома
+                .gift__item 
+                    .gift__item-img 
+                        img(src="./img/plan.webp", alt="gifts") 
+                    .gift__item-title PDF-пример
+                    .gift__item-text эталонного архитектурного плана
+        .gift__right
+            include ../mixins/_form.pug
+            +form("gift-form", "<span>Назначьте</span> бесплатную встречу", "и получите 2 эскиза дома + полезную информацию", "Заявка на встречу", "После отправки данных менеджер свяжется с вами для назначения встречи с архитектором")

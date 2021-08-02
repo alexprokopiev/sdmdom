@@ -1,0 +1,243 @@
+.button
+    position: relative
+    font-family: 'TTNorms', sans-serif
+    font-weight: 700
+    text-decoration: none
+    text-transform: uppercase
+    text-align: center
+    background: #d79a23
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4)
+    border: none
+    outline: none
+    cursor: pointer
+    &::before
+        content: ""
+        position: absolute
+        display: flex
+        justify-content: center
+        align-items: center
+        left: 0
+        right: 0
+        height: 100%
+        background: linear-gradient(to bottom, #fddb85 0%, #fec132 100%)
+        background-size: 1px 100%
+        transition: .2s
+    &:hover
+        &::before
+            background-size: 1px 1000%
+    &:active
+        &::before
+            top: 0
+    &_header
+        padding: 1.1rem 2.3rem 1.3rem
+        border-radius: 1.2rem
+        font-size: 1rem
+        &::before
+            border-radius: 1.2rem
+            top: -0.2rem
+    &__header-text
+        position: relative
+        padding-left: 2rem
+        &::after
+            content: ""
+            position: absolute
+            width: 1.3rem
+            height: 1.3rem
+            left: 0
+            top: 0
+            background: url(./img/phone.svg) center center/cover no-repeat
+    &_start
+        display: block
+        margin: 0
+        padding: 2.6rem 10.6rem 2.6rem 5.1rem
+        border-radius: 3rem
+        font-size: 1.4rem
+        &::before
+            border-radius: 3rem
+            top: -0.3rem
+    &__start-text
+        position: relative
+        span
+            display: block
+            font-size: 1.6rem
+            font-weight: 400
+            line-height: 2rem
+            text-transform: none
+        &::after
+            content: ""
+            position: absolute
+            width: 9rem
+            height: 9rem
+            right: -10rem
+            top: -3.5rem
+            background: url(./img/sheets.webp) center center/cover no-repeat
+    &_house-card, &_quiz, &_quiz-last
+        display: block
+        width: 32rem
+        height: 8rem
+        margin: 2.5rem auto
+        border-radius: 2.2rem
+        &::before
+            border-radius: 2.2rem
+            line-height: 2.2rem
+            padding: 0 3rem
+            top: -0.3rem
+    &_form
+        margin-top: 2rem
+        width: 100%
+        height: 8rem
+        border-radius: 3rem
+        line-height: 2rem
+        padding: 2.2rem 8.2rem 1.8rem
+        &::before
+            border-radius: 3rem
+            top: -0.3rem
+        &::after
+            position: absolute
+            content: ''
+            width: fit-content
+            text-transform: none
+            font-weight: 400
+            font-size: 1.5rem
+            transform: translateX(-50%)
+    &_stages
+        display: block
+        margin: 10rem auto
+        width: 44rem
+        height: 9rem
+        font-size: 1.4rem
+        line-height: 2rem
+        padding: 2.5rem 5.7rem 2.1rem
+        border-radius: 2.2rem
+        &::before
+            content: "Рассказать о своём доме в 6 кликов"
+            border-radius: 2.2rem
+            top: -0.3rem
+        &::after
+            position: absolute
+            content: "и получить индивидуальное предложение"
+            width: fit-content
+            text-transform: none
+            font-weight: 400
+            font-size: 1.5rem
+            bottom: 1.5rem
+            transform: translateX(-50%)
+    &_footer
+        padding: 1.1rem 2.3rem 1.3rem
+        border-radius: 1.2rem
+        font-size: 1rem
+        &::before
+            border-radius: 1.2rem
+            top: -0.2rem
+    &__footer-text
+        position: relative
+        padding-left: 2rem
+        &::after
+            content: ""
+            position: absolute
+            width: 1.3rem
+            height: 1.3rem
+            left: 0
+            top: 0
+            background: url(./img/phone.svg) center center/cover no-repeat
+    &_quiz, &_quiz-last
+        position: absolute
+        bottom: 3rem
+        left: 8rem
+        &::before
+            content: 'Следующий вопрос'
+    &_quiz-last
+        &::before
+            content: 'Последний шаг'
+    &_quiz-disable
+        position: absolute
+        top: -0.3rem
+        left: 0
+        width: 100%
+        height: 100%
+        background-color: rgba(255,255,255,.8)
+        cursor: auto
+        transition: .2s
+        &::before
+            position: absolute
+            content: ''
+            left: 0
+            bottom: -0.3rem
+            width: 100%
+            height: .3rem
+            background-color: rgba(255,255,255,.8)
+.houses .button_house-card::before
+    content: "Узнать стоимость дома"
+.projects .button_house-card::before
+    content: "Узнать стоимость строительства проекта"
+.gift .button_form::before
+    content: "Назначить встречу"
+.gift .button_form::after
+    content: "и получить подарки"
+.your-project .button_form::before
+    content: "Отправить на аудит и получить "
+.your-project .button_form::after
+    content: "индивидуальное предложение"
+.map .button_form::before
+    content: "Назначить встречу"
+.popup .button_form::before
+    content: "Скачать PDF статью"
+.excursion .button_form::before
+    content: "Записаться на экскурсию"
+.callback .button_form::before
+    content: "Отправить заявку на звонок"
+.quiz .button_form::before
+    content: "Получить смету, эскизы и скидку!"
+
+@media ( max-width: 1200px)
+    .button
+        &_start
+            margin: 5rem auto 0
+        &_stages
+            margin: 3rem auto
+@media ( max-width: 992px)
+    .button
+        &_house-card
+            width: 24rem
+            &::before
+                font-size: 1.2rem
+        &_quiz
+            bottom: 1rem
+            left: 5rem
+@media ( max-width: 768px)
+    .button
+        &_header
+            font-size: 0.8rem
+        &_house-card
+            width: 27rem
+@media (max-width: 576px)
+    .button
+        &_header
+            padding: 1rem
+        &_start
+            margin-top: 2rem
+            padding: 1rem 10rem 1rem 2rem
+            font-size: 1.2rem
+        &__start-text
+            &::after
+                width: 7rem
+                height: 7rem
+                right: -8rem
+                top: -2.5rem
+            span
+                font-size: 1.2rem
+        &_form
+            height: 5.5rem
+            font-size: 1.2rem
+            &::after
+                font-size: 1.2rem
+        &_stages
+            width: 100%
+            height: 8rem
+            font-size: 1.2rem
+            &::after
+                font-size: 1.2rem
+        &_quiz
+            bottom: 0
+            left: 2rem
+            width: calc(100% - 4rem)

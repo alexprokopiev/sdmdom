@@ -1,0 +1,239 @@
+extends _modals.pug
+block modal__inner
+    .quiz
+        .quiz__page
+            .quiz__steps
+                .quiz__steps-progress
+                .quiz__steps-text Шаг 1 из 7
+            .quiz__subtitle Отлично!
+                br
+                |  Вы уже думали, каким будет Ваш дом?
+            h2.quiz__title Может быть, у Вас уже есть проект? Расскажите!
+            .quiz__question
+                label.quiz__question-label-radio 
+                    input(form="quiz-form" type="radio" name="quest1" value="Да, есть готовый проект")
+                    | Да, есть готовый проект
+                    .quiz__input
+                label.quiz__question-label-radio
+                    input(form="quiz-form" type="radio" name="quest1" value="Знаю что нравится, но надо проектировать")
+                    | Знаю что нравится, но надо проектировать
+                    .quiz__input
+                label.quiz__question-label-radio 
+                    input(form="quiz-form" type="radio" name="quest1" value="Пока не представляю")
+                    | Пока не представляю
+                    .quiz__input
+                label.quiz__question-label-radio
+                    input(form="quiz-form" type="radio" name="quest1" value="Нет, подбираю проект")
+                    | Нет, подбираю проект
+                    .quiz__input
+            .quiz__img 
+                img(src="./img/quiz_man.png", alt="man")
+                .quiz__img-info 
+                    .quiz__img-name 
+                        span Радислав Парфишин
+                    .quiz__img-descr
+                        span генеральный директор 
+            button(disabled).button.button_quiz
+                .button_quiz-disable
+        .quiz__page
+            .quiz__steps
+                .quiz__steps-progress
+                .quiz__steps-text Шаг 2 из 7
+            .quiz__subtitle Это хорошо! Мы можем сделать аудит и, при необходимости, смету, возможно стоимость сможем сделать интереснее
+            h2.quiz__title Уже определились с размерами дома?
+            .quiz__question
+                label.quiz__question-label-range
+                    input(form="quiz-form" type="range" name="quest2" min="150" max="1000" value="300").quiz__range
+                .quiz__values-wrap 
+                    .quiz__min-value Меньше 150 м
+                        sup 2
+                    .quiz__cur-value 300 м
+                        sup 2
+                    .quiz__max-value 1 000 м
+                        sup 2
+                        |  и более
+            .quiz__img 
+                img(src="./img/quiz_man.png", alt="man")
+                .quiz__img-info 
+                    .quiz__img-name 
+                        span Радислав Парфишин
+                    .quiz__img-descr
+                        span генеральный директор 
+            button(disabled).button.button_quiz
+                .button_quiz-disable
+        .quiz__page
+            .quiz__steps
+                .quiz__steps-progress
+                .quiz__steps-text Шаг 3 из 7
+            .quiz__subtitle Супер, в доме будет просторно!
+                br
+                |  Если захотите добавить мансарду или цокольный этаж — не проблема!
+            h2.quiz__title Из какого материала планируете строить?
+            .quiz__question.quiz__question_image
+                label.quiz__question-label-img
+                    .quiz__question-img 
+                        img(src="./img/quest_brus.jpg", alt="quest_img")
+                    .quiz__input.quiz__input_img
+                    input(form="quiz-form" type="radio" name="quest3" value="Клееный брус") 
+                    | Клееный брус
+                label.quiz__question-label-img
+                    .quiz__question-img 
+                        img(src="./img/quest_cut.jpg", alt="quest_img")
+                    .quiz__input.quiz__input_img
+                    input(form="quiz-form" type="radio" name="quest3" value="Оцилиндрованное бревно")
+                    | Оцилиндрованное бревно
+                label.quiz__question-label-img
+                    .quiz__question-img 
+                        img(src="./img/quest_profbrus.jpg", alt="quest_img")
+                    .quiz__input.quiz__input_img
+                    input(form="quiz-form" type="radio" name="quest3" value="Профилированный брус")
+                    | Профилированный брус
+                label.quiz__question-label-img
+                    .quiz__question-img 
+                        img(src="./img/quest_combo.jpg", alt="quest_img")
+                    .quiz__input.quiz__input_img
+                    input(form="quiz-form" type="radio" name="quest3" value="Комбинированный камень + дерево")
+                    | Комбинированный камень + дерево
+                label.quiz__question-label-img
+                    .quiz__question-img 
+                        span ?
+                    .quiz__input.quiz__input_img
+                    input(form="quiz-form" type="radio" name="quest3" value="Пока не знаю")
+                    | Пока не знаю
+            button(disabled).button.button_quiz
+                .button_quiz-disable
+        .quiz__page
+            .quiz__steps
+                .quiz__steps-progress
+                .quiz__steps-text Шаг 4 из 7
+            .quiz__subtitle Хороший выбор!
+            h2.quiz__title Какой стиль архитектуры Вам ближе всего?
+            .quiz__question.quiz__question_image
+                label.quiz__question-label-img
+                    .quiz__question-img 
+                        img(src="./img/quest_rus.jpg", alt="quest_img")
+                    .quiz__input.quiz__input_img
+                    input(form="quiz-form" type="radio" name="quest4" value="Русский стиль") 
+                    | Русский
+                    br
+                    | стиль
+                label.quiz__question-label-img
+                    .quiz__question-img 
+                        img(src="./img/quest_shale.jpg", alt="quest_img")
+                    .quiz__input.quiz__input_img
+                    input(form="quiz-form" type="radio" name="quest4" value="Шале") 
+                    | Шале
+                label.quiz__question-label-img
+                    .quiz__question-img 
+                        img(src="./img/quest_modern.jpg", alt="quest_img")
+                    .quiz__input.quiz__input_img
+                    input(form="quiz-form" type="radio" name="quest4" value="Модерн") 
+                    | Модерн
+                label.quiz__question-label-img
+                    .quiz__question-img 
+                        img(src="./img/quest_fachwerk.jpg", alt="quest_img")
+                    .quiz__input.quiz__input_img
+                    input(form="quiz-form" type="radio" name="quest4" value="Фахверк") 
+                    | Фахверк
+                label.quiz__question-label-img
+                    .quiz__question-img 
+                        img(src="./img/quest_scand.jpg", alt="quest_img")
+                    .quiz__input.quiz__input_img
+                    input(form="quiz-form" type="radio" name="quest4" value="Скандинавский стиль") 
+                    | Скандинавский стиль
+                label.quiz__question-label-img
+                    .quiz__question-img 
+                        span ?
+                    .quiz__input.quiz__input_img
+                    input(form="quiz-form" type="radio" name="quest4" value="Другое")
+                    | Другое
+            button(disabled).button.button_quiz
+                .button_quiz-disable
+        .quiz__page
+            .quiz__steps
+                .quiz__steps-progress
+                .quiz__steps-text Шаг 5 из 7
+            .quiz__subtitle У вас хороший вкус!
+            h2.quiz__title Когда планируете начать строительство?
+            .quiz__question
+                label.quiz__question-label-radio 
+                    input(form="quiz-form" type="radio" name="quest5" value="Приступаем к проектированию и сразу строимся")
+                    | Приступаем к проектированию и сразу строимся
+                    .quiz__input
+                label.quiz__question-label-radio 
+                    input(form="quiz-form" type="radio" name="quest5" value="В течение 1-2 месяцев")
+                    | В течение 1-2 месяцев
+                    .quiz__input
+                label.quiz__question-label-radio 
+                    input(form="quiz-form" type="radio" name="quest5" value="Через 3-6 месяцев")
+                    | Через 3-6 месяцев
+                    .quiz__input
+                label.quiz__question-label-radio 
+                    input(form="quiz-form" type="radio" name="quest5" value="В следующем году")
+                    | В следующем году
+                    .quiz__input
+                label.quiz__question-label-radio 
+                    input(form="quiz-form" type="radio" name="quest5" value="Пока не знаю")
+                    | Пока не знаю
+                    .quiz__input
+            .quiz__img 
+                img(src="./img/quiz_man.png", alt="man")
+                .quiz__img-info 
+                    .quiz__img-name 
+                        span Радислав Парфишин
+                    .quiz__img-descr
+                        span генеральный директор 
+            button(disabled).button.button_quiz
+                .button_quiz-disable
+        .quiz__page
+            .quiz__steps
+                .quiz__steps-progress
+                .quiz__steps-text Шаг 6 из 7
+            .quiz__subtitle Отлично. Наша команда готова к работе.
+            h2.quiz__title Кстати, у Вас уже есть участок?
+            .quiz__question
+                label.quiz__question-label-radio 
+                    input(form="quiz-form" type="radio" name="quest6" value="Да, в ближайшем Подмосковье")
+                    | Да, в ближайшем Подмосковье
+                    .quiz__input
+                label.quiz__question-label-radio 
+                    input(form="quiz-form" type="radio" name="quest6" value="Да, до 200 км до Москвы")
+                    | Да, до 200 км до Москвы
+                    .quiz__input
+                label.quiz__question-label-radio 
+                    input(form="quiz-form" type="radio" name="quest6" value="Да, в другом регионе России")
+                    | Да, в другом регионе России
+                    .quiz__input
+                label.quiz__question-label-radio 
+                    input(form="quiz-form" type="radio" name="quest6" value="Нет, еще в процессе")
+                    | Нет, еще в процессе
+                    .quiz__input
+            .quiz__img 
+                img(src="./img/quiz_man.png", alt="man")
+                .quiz__img-info 
+                    .quiz__img-name 
+                        span Радислав Парфишин
+                    .quiz__img-descr
+                        span генеральный директор 
+            button(disabled).button.button_quiz.button_quiz-last
+                .button_quiz-disable
+        .quiz__page
+            .quiz__steps
+                .quiz__steps-progress
+                .quiz__steps-text Шаг 7 из 7
+            .quiz__page-wrap 
+                .quiz__page-left 
+                    +form("quiz-form", "Оставьте ваш контакт <span>и получите</span>", "предварительный расчет стоимости строительства в 3 вариантах комплектации", "Заявка на расчет", "")
+                .quiz__page-right
+                    .quiz__page-right-subtitle Остался последний шаг!
+                    h2.quiz__page-right-title Для вас есть подарок
+                        span  за то, что Вы сэкономили нам время
+                    .quiz__sertificate
+                        .quiz__sertificate-label 
+                        .quiz__sertificate-name Сертификат
+                        .quiz__sertificate-text на скидку 27 000 руб. на проектирование в компании SDMDOM
+                        .quiz__sertificate-number Номер: 
+                            span 007UDA4A11
+                    .quiz__sertificate-valid Действителен до: 
+                        span 12 августа 2021
+                    .quiz__sertificate-valid-descr Сертификат закрепляется за номером телефона

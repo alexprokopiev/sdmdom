@@ -1,0 +1,26 @@
+header.header
+    .container
+        .header__logo
+            a(href="/").header__logo-img
+                img(src="./img/logo.svg", alt="logo") 
+            .header__logo-text Индивидуальное загородное строительство с 1991 года
+        .header__address-wrap
+            .header__address-wrap-icon
+                img(src="./img/location.svg", alt="location")
+            .header__address-wrap-text 
+                span Москва
+                |  Волоколамское шоссе, 116, стр 3, офис 104А
+        .header__trip
+            .header__trip-wrap
+                .header__trip-wrap-img
+                    img(src="./img/house.webp", alt="house")
+                .header__trip-wrap-text 
+                    span 467
+                    | домов построено
+            .header__trip-sign-up
+                a(href="#").refer.open-excursion Записаться на экскурсию
+        .header__phone
+            .header__phone-text Есть вопросы? Звоните!
+            a(href="tel:+74956657070").header__phone-number +7 495 665-70-70
+            button.button.button_header.open-callback
+                .button__header-text Перезвоните мне

@@ -1,0 +1,85 @@
+.navbar
+    display: none
+    opacity: 0
+    position: fixed
+    width: 100%
+    height: 4.5rem
+    background: linear-gradient(to bottom, #7585a3 0%, #5b6b8a 100%)
+    z-index: 2
+    transition: .2s
+    .container
+        display: flex
+        height: 4.5rem
+        justify-content: space-between
+        align-items: center
+    &__refer
+        display: block
+        color: #ffffff
+        font-size: 1.6rem
+        text-decoration: none
+        padding: .2rem
+        border-bottom: 1px dotted transparent
+        &:hover
+            border-bottom: 1px dotted #ffffff
+    &_mobile
+        display: none
+        opacity: 0
+        position: fixed
+        width: 100%
+        min-height: 4.5rem
+        height: fit-content
+        background: linear-gradient(to bottom, #7585a3 0%, #5b6b8a 100%)
+        z-index: 2
+        transition: .2s
+    &__title
+        display: flex
+        justify-content: center
+        align-items: center
+        min-height: 4.5rem
+        span
+            position: relative
+            display: block
+            color: #ffffff
+            font-size: 1.6rem
+    &__burger
+        position: absolute
+        width: 1.5rem
+        height: 1.5rem
+        top: 50%
+        left: -2rem
+        display: flex
+        flex-direction: column
+        justify-content: space-between
+        transform: translateY(-50%)
+    &__burger-line
+        width: 1.5rem
+        height: .2rem
+        background-color: #ffffff
+    &__content
+        display: none
+        opacity: 0
+        flex-direction: column
+        align-items: center
+        justify-content: space-around
+        height: 30rem
+
+.back-to-begin
+    position: fixed
+    display: none
+    opacity: 0
+    justify-content: center
+    align-items: center
+    width: 4rem
+    height: 4rem
+    bottom: 5rem
+    right: 5rem
+    background: linear-gradient(to bottom, #8497bb 1%, #5a709a 100%)
+    z-index: 2
+    transition: .2s
+    img
+        width: 1.4rem
+        height: 1.4rem
+@media (max-width: 576px)
+    .back-to-begin
+        bottom: 2rem
+        right: 2rem

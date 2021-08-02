@@ -1,0 +1,11 @@
+extends _modals.pug
+block modal__inner
+    .callback 
+        .callback__left 
+            .callback__left-info 
+                .callback__left-name 
+                    span Владимир Петров
+                .callback__left-descr 
+                    span консультант по строительству домов 
+        .callback__right 
+            +form("callback-form", "Перезвоните мне,", "Наш менеджер свяжется с вами в течение 15 минут, чтобы ответить на все вопросы", "Заявка на обратный звонок", "")
